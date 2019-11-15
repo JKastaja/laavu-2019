@@ -1,0 +1,43 @@
+@import '../variables';
+
+.container > * {
+	margin-bottom: $spacer;
+}
+
+.carousel {
+	border-radius: $border-radius;
+	overflow: hidden;
+}
+
+.horisontal-scroll {
+	$height: 18rem;
+	min-height: $height;
+
+	.horisontal-scroll-card {
+		width: 18rem;
+		height: $height;
+
+		&:not(:last-of-type) {
+			margin-right: $spacer;
+		}
+	}
+}
+
+.logo-laavu {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 2rem 1rem 2.5rem 1rem;
+
+	.icon {
+		@include visit-finland-background();
+		$dimension: 3rem;
+		height: $dimension;
+		width: $dimension;
+		margin-right: 0.7rem;
+	}
+
+	.text {
+		font-size: 2rem;
+	}
+}

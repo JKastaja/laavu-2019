@@ -1,0 +1,33 @@
+@import '../variables';
+
+.tab-bottom-navigation {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	padding-top: 3px;
+	background: white;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+	a {
+		display: flex;
+		justify-content: center;
+	}
+
+	&-margin { // goes to parent to give space to bottom on page
+		margin-bottom: calc(42px + #{$spacer});
+	}
+}
+
+.nav-link.active {
+	color: $palette-accent-blue !important;
+	background: whitesmoke;
+}
+
+.icon-home {
+	@include visit-finland-background();
+	$dimension: 24px;
+	height: $dimension;
+	width: $dimension;
+}

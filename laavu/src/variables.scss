@@ -1,0 +1,13 @@
+$spacer: 2rem;
+$border-radius: .3rem;
+
+$palette-accent-blue: #31ccfd;
+
+$visit-finland-logo: 'https://www.visitfinland.com/app/themes/visitfinland-3-wordpress-theme/assets/images/visitfinland.png';
+
+@mixin visit-finland-background() {
+	background-image: url($visit-finland-logo);
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
