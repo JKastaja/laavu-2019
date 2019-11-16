@@ -22,6 +22,7 @@ const content = {
 			id: 'haukkalampi',
 			name: 'Haukkalampi',
 			image: 'https://source.unsplash.com/collection/561941/1200x600?aax',
+			description: `Short description for card...`,
 			content: [
 				{
 					type: 'text',
