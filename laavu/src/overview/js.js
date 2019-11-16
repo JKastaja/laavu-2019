@@ -19,9 +19,7 @@ class Overview extends React.Component {
 		this.props.history.push(path);
 	}
 
-
-	componentDidMount() {
-	}
+	componentDidMount() {}
 
 	render() {
 		return (
@@ -64,21 +62,21 @@ class Overview extends React.Component {
 				</Jumbotron>
 				<Row>
 					<Col>
-						<h3>Parks</h3>
+						<h3>Starting points for your adventure</h3>
 						<HorizontalScroll
 							pageLock={true}
-							reverseScroll={true}
+							reverseScroll={false}
 							className='horisontal-scroll'
 						>
 							{
 								content.locations.map((item, idx) => {
 									return (
-										<Card className='horisontal-scroll-card' key={idx} onClick={ () => this.routeChange(`/experience:${item.path}`)}>
+										<Card className='horisontal-scroll-card' key={idx} onClick={ () => this.routeChange(`/location:${item.id}`)}>
 											<Card.Img variant="top" src={item.image}/>
 											<Card.Body>
 												<Card.Title>{item.name}</Card.Title>
 												<Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
-												<Card.Text className='truncate'>
+												<Card.Text>
 													Some quick example text to build on the card title and make up the bulk of
 													the card's content.
 												</Card.Text>
@@ -95,18 +93,18 @@ class Overview extends React.Component {
 						<h3>Experiences</h3>
 						<HorizontalScroll
 							pageLock={true}
-							reverseScroll={true}
+							reverseScroll={false}
 							className='horisontal-scroll'
 						>
 							{
 								content.experiences.map((item, idx) => {
 									return (
-										<Card className='horisontal-scroll-card' key={idx} onClick={ () => this.routeChange(`/experience:${item.path}`)}>
+										<Card className='horisontal-scroll-card' key={idx} onClick={ () => this.routeChange(`/experience:${item.id}`)}>
 											<Card.Img variant="top" src={item.image}/>
 											<Card.Body>
 												<Card.Title>{item.name}</Card.Title>
 												<Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
-												<Card.Text className='truncate'>
+												<Card.Text>
 													Some quick example text to build on the card title and make up the bulk of
 													the card's content.
 												</Card.Text>

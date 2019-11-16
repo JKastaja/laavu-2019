@@ -1,12 +1,18 @@
 @import '../variables';
 
+$tab-margin: 0.3rem;
+
+.root {
+	overflow-x: hidden;
+}
+
 .tab-bottom-navigation {
 	position: fixed;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	width: 100%;
-	padding-top: 3px;
+	padding-top: $tab-margin;
 	background: white;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
@@ -21,8 +27,8 @@
 }
 
 .nav-link.active {
-	color: $palette-accent-blue !important;
-	background: whitesmoke;
+	color: $palette-accent-orange !important;
+	background: whitesmoke !important;
 }
 
 .icon-home {
@@ -30,4 +36,21 @@
 	$dimension: 24px;
 	height: $dimension;
 	width: $dimension;
+	-webkit-filter: grayscale(1);
+
+	.active & {
+		-webkit-filter: none;
+	}
+}
+
+.nav-item {
+	margin: 0 $tab-margin;
+
+	&:first-of-type {
+		margin-right: 0;
+	}
+
+	&:last-of-type {
+		margin-left: 0;
+	}
 }

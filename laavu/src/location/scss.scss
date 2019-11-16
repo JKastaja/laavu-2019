@@ -1,0 +1,42 @@
+@import '../variables';
+
+.location-component {
+
+	.hero {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 15rem;
+		width: 100%;
+		margin-top: $spacer;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		h2 {
+			color: white;
+			text-shadow: 0 0 30px #000;
+		}
+	}
+
+	.chart {
+		width: 100%;
+	}
+
+	iframe {
+		width: 100%;
+		border: none;
+		outline: none;
+
+		&[src*="google.com/maps"] {
+			pointer-events: none;
+		}
+	}
+
+	img {
+		max-width: 100%;
+	}
+
+	img, .hero, iframe {
+		border-radius: $border-radius;
+	}
+}

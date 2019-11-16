@@ -10,8 +10,8 @@
 }
 
 .horisontal-scroll {
-	$height: 18rem;
-	min-height: $height;
+	$height: 20rem;
+	height: $height !important;
 
 	.horisontal-scroll-card {
 		width: 18rem;
@@ -40,4 +40,8 @@
 	.text {
 		font-size: 2rem;
 	}
+}
+
+.scroll-horizontal {
+	overflow: visible !important;
 }

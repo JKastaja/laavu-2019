@@ -5,6 +5,7 @@ import './scss.scss';
 import Overview from "../overview/js";
 import Trips from "../trips/js";
 import Profile from "../profile/js";
+import Location from "../location/js";
 import {Switch, Link, Route, BrowserRouter as Router} from "react-router-dom";
 import {Nav} from 'react-bootstrap';
 
@@ -33,11 +34,12 @@ class Root extends React.Component {
 						<Route path="/profile">
 							<Profile />
 						</Route>
+						<Route path="/location:id" children={<Location />} />
 					</Switch>
 					<Nav
 						fill
 						variant="tabs"
-						defaultActiveKey="/"
+						defaultActiveKey="overview"
 						className="tab-bottom-navigation"
 					>
 						<Nav.Item>
